@@ -12,7 +12,10 @@ free -h | awk '/Mem/{print \"Ram: \"\$3,\$2}';
 df -h| pcregrep -M '/\n' | awk '{print \"Disk: \"\$3, \$2}'
 curl wttr.in/thanh_ha_hai_duong?1n;
 "
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
-[[ $- != *i* ]] && return
 PS1='\[\e[93m\][$PWD] \[\e[97m\]'
 . /usr/share/bash-completion/bash_completion
