@@ -5,7 +5,7 @@ font pango:monospace 0
 $e "xrdb ~/.Xresources"
 $e xrandr --newmode 1 $(cvt 1368 768 | grep Mod | awk '{$1=$2=""; print $0}') && xrandr --addmode VGA-1 1 && xrandr --output VGA-1 --mode 1
 $e "pulseaudio"
-$e "mount UUID=499D-D4B5 ~/d/"
+$e "mount UUID=8A9B-D1F5 ~/d/"
 
 default_border pixel 0
 for_window [class=".*"] floating disable
