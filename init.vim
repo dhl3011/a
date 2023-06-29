@@ -13,10 +13,6 @@ noremap <silent> <c-u> :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/'
 noremap <silent> <c-r> <esc>:!google-chrome --no-sandbox %<cr><cr>
 noremap <c-a> ggVG
 
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
