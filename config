@@ -16,8 +16,8 @@ bindsym $m+e layout toggle split
 
 bindsym $m+s $e "sleep 1;xset dpms force off"
 bindsym $m+b $e google-chrome --no-sandbox
-bindsym $m+x $e pactl set-sink-volume @DEFAULT_SINK@ +10%
-bindsym $m+z $e pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym $m+x $e pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym $m+z $e pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym $m+m $e pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym $m+Return $e i3-sensible-terminal
 bindsym $m+q kill
