@@ -12,6 +12,7 @@ noremap <silent> <c-c> :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')
 noremap <silent> <c-u> :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
 au! BufWritePost init.vim so %
+au! BufWritePost .Xresources silent !xrdb /root/.Xresources
 au BufEnter * silent call C()
 
 function C()

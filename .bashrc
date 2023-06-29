@@ -5,6 +5,7 @@ alias rm='rm -rf'
 alias c='clear && . .bashrc'
 alias v='nvim'
 alias l='ls -a --color=auto'
+alias lsblk='lsblk -f'
 alias i="
 pactl list sinks | awk '/ft:/{print \"Volume:\"\$5}'; 
 date '+%a-%d-%m-%y %T';
