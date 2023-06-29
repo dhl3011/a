@@ -11,6 +11,9 @@ default_border pixel 0
 for_window [class=".*"] floating disable
 workspace_layout tabbed
 
+bindsym $m+w layout tabbed
+bindsym $m+e layout toggle split
+
 bindsym $m+s $e "sleep 1;xset dpms force off"
 bindsym $m+b $e google-chrome --no-sandbox
 bindsym $m+x $e pactl set-sink-volume @DEFAULT_SINK@ +10%
