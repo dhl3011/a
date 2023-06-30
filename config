@@ -5,7 +5,7 @@ font pango:monospace 0
 $e "xrdb ~/.Xresources"
 $e xrandr --newmode 1 $(cvt 1368 768 | grep Mod | awk '{$1=$2=""; print $0}') && xrandr --addmode VGA-1 1 && xrandr --output VGA-1 --mode 1
 $e "pulseaudio"
-$e "mount UUID=E2ED-9815 ~/d/"
+$e "mount UUID=01047e30-b43e-40cc-8f47-00b3ed51aba0 ~/d/"
 
 default_border pixel 0
 for_window [class=".*"] floating disable
@@ -15,7 +15,8 @@ bindsym $m+w layout tabbed
 bindsym $m+shift+w layout toggle split
 
 bindsym $m+s $e "sleep 1;xset dpms force off"
-bindsym $m+b $e google-chrome --no-sandbox
+bindsym $m+b $e google-chrome-stable --no-sandbox
+bindsym $m+shift+b $e google-chrome --no-sandbox
 bindsym $m+x $e pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym $m+z $e pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym $m+m $e pactl set-sink-mute @DEFAULT_SINK@ toggle

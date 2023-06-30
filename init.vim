@@ -9,8 +9,8 @@ noremap <c-l> <esc>:bn<cr>
 noremap ; <esc>:noh<cr>:echo &ft<cr>
 noremap <c-o> <esc>:e ~/.bashrc<cr>:e ~/.config/i3/config<cr>:e ~/.Xresources<cr>:e ~/.config/nvim/init.vim<cr>
 noremap <c-r> <esc>:call R()<cr><cr>
-noremap <silent> <c-c> :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
-noremap <silent> <c-u> :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+noremap <silent> <c-c> :<C-B>silent <C-E>s/^/<C-R>=escape(g:c,'\/')<CR>/<CR>:nohlsearch<CR>
+noremap <silent> <c-u> :<C-B>silent <C-E>s/^\V<C-R>=escape(g:c,'\/')<CR>//e<CR>:nohlsearch<CR>
 noremap <silent> <c-r> <esc>:!google-chrome --no-sandbox %<cr><cr>
 noremap <c-a> ggVG
 

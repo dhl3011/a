@@ -1,5 +1,6 @@
 # if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then exec xinit /usr/bin/i3; fi
 alias n='nnn -H'
+alias cp='cp -r'
 alias mk='mkdir -p'
 alias rm='rm -rf'
 alias c='clear && . .bashrc'
@@ -13,10 +14,8 @@ free -h | awk '/Mem/{print \"Ram: \"\$3,\$2}';
 df -h| pcregrep -M '/\n' | awk '{print \"Disk: \"\$3, \$2}'
 curl wttr.in/thanh_ha_hai_duong?1n;
 "
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+
+[[ $- != *i* ]] && return
 
 PS1='\[\e[93m\][$PWD] \[\e[97m\]'
 . /usr/share/bash-completion/bash_completion
