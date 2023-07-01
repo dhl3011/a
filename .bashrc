@@ -15,7 +15,6 @@ alias weather="curl wttr.in/thanh_ha_hai_duong?1n"
 
 [[ $- != *i* ]] && return
 
-PS1='\[\e[93m\]$PWD \[\e[97m\] $(volume) $(date) '
 PS1='\[\e[38;5;33m\]$PWD \[\e[38;5;34m\]$(volume) \[\e[38;5;184m\]$(date) \[\e[38;5;99m\]$(ram) \[\e[38;5;45m\]$(disk)\[\e[0m\] '
 . /usr/share/bash-completion/bash_completion
 clear
