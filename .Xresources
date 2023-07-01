@@ -2,7 +2,7 @@ xvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 URxvt.iso14755: false
 URxvt.iso14755_52: false
-URxvt.font:xft:Monospace:pixelsize=18
+URxvt.font:xft:Monospace:size=14:bold
 URxvt*scrollBar: false
 URxvt*background: black
 URxvt*foreground: white
