@@ -1,5 +1,4 @@
 set nu ls=0 ts=4 sw=4 sts=4 clipboard=unnamedplus nobackup nowritebackup noswapfile wildmenu smartindent smarttab
-set omnifunc=htmlcomplete#CompleteTags
 syntax on
 inoremap <c-w> <esc>:w<cr>
 noremap <c-w> <esc>:w<cr>
@@ -20,7 +19,6 @@ inoremap {;<CR> {<CR>};<ESC>O
 
 au! BufWritePost init.vim so %
 au BufWritePost .Xresources silent !xrdb /root/.Xresources
-au BufWritePost *.html silent 
 au BufEnter * silent call C()
 
 function C()
