@@ -1,5 +1,5 @@
 set nu ls=0 ts=4 sw=4 sts=4 clipboard=unnamedplus nobackup nowritebackup noswapfile wildmenu smartindent smarttab
-set omnifunc=syntaxcomplete#Complete
+set omnifunc=htmlcomplete#CompleteTags
 syntax on
 inoremap <c-w> <esc>:w<cr>
 noremap <c-w> <esc>:w<cr>
@@ -11,7 +11,7 @@ noremap <c-o> <esc>:e ~/.bashrc<cr>:e ~/.config/i3/config<cr>:e ~/.Xresources<cr
 noremap <c-r> <esc>:call R()<cr><cr>
 noremap <silent> <c-c> :<C-B>silent <C-E>s/^/<C-R>=escape(g:c,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> <c-u> :<C-B>silent <C-E>s/^\V<C-R>=escape(g:c,'\/')<CR>//e<CR>:nohlsearch<CR>
-noremap <silent> <c-r> <esc>:!google-chrome --no-sandbox %<cr><cr>
+noremap <silent> <c-r> <esc>:!google-chrome-stable --no-sandbox %<cr><cr>
 noremap <c-a> ggVG
 
 inoremap { {}<left>
