@@ -1,4 +1,4 @@
-set nu ls=0 ts=4 sw=4 sts=4 clipboard=unnamedplus nobackup nowritebackup noswapfile wildmenu smartindent smarttab
+set nu ls=0 ts=4 sw=4 sts=4 clipboard=unnamedplus nobackup nowritebackup noswapfile wildmenu smartindent smarttab linebreak
 syntax on
 inoremap <c-w> <esc>:w<cr>
 noremap <c-w> <esc>:w<cr>
