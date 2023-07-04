@@ -1,4 +1,4 @@
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then exec xinit /bin/i3; fi
+
 alias n='nnn -H'
 alias cp='cp -r'
 alias mk='mkdir -p'
@@ -13,8 +13,10 @@ alias ram="free -h | awk '/Mem/{print \$3,\$2}'"
 alias disk="df -h| pcregrep -M '/\n' | awk '{print \$3, \$2}'"
 alias weather="curl wttr.in/thanh_ha_hai_duong?1n"
 
-[[ $- != *i* ]] && return
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
-PS1='\[\e[38;5;33m\]$PWD \[\e[38;5;34m\]$(volume) \[\e[38;5;184m\]$(date) \[\e[38;5;99m\]$(ram) \[\e[38;5;45m\]$(disk)\[\e[0m\] '
+PS1='\[\e[38;5;33m\]$PWD \[\e[0m\]'
 . /usr/share/bash-completion/bash_completion
-clear
