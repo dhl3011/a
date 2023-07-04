@@ -5,7 +5,7 @@ font pango:dejavu sans mono 0
 $e "xrdb ~/.Xresources"
 $e xrandr --newmode 1 $(cvt 1368 768 | grep Mod | awk '{$1=$2=""; print $0}') && xrandr --addmode VGA-1 1 && xrandr --output VGA-1 --mode 1
 $e "pulseaudio"
-$e "mount UUID=01047e30-b43e-40cc-8f47-00b3ed51aba0 ~/d/"
+$e "mount UUID=2E19-70D5 ~/d/"
 
 default_border pixel 0
 for_window [class=".*"] floating disable
