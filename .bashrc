@@ -1,4 +1,4 @@
-
+if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then startx; fi
 alias n='nnn -H'
 alias cp='cp -r'
 alias mk='mkdir -p'

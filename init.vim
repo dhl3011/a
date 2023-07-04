@@ -10,7 +10,7 @@ noremap <c-o> <esc>:e ~/.bashrc<cr>:e ~/.config/i3/config<cr>:e ~/.Xresources<cr
 noremap <c-r> <esc>:call R()<cr><cr>
 noremap <silent> <c-c> :<C-B>silent <C-E>s/^/<C-R>=escape(g:c,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> <c-u> :<C-B>silent <C-E>s/^\V<C-R>=escape(g:c,'\/')<CR>//e<CR>:nohlsearch<CR>
-noremap <silent> <c-r> <esc>:!google-chrome-stable --no-sandbox %<cr><cr>
+noremap <silent> <c-r> <esc>:!google-chrome --no-sandbox %<cr><cr>
 noremap <c-a> ggVG
 
 inoremap { {}<left>
