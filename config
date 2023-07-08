@@ -14,7 +14,9 @@ workspace_layout tabbed
 bindsym $m+w layout tabbed
 bindsym $m+shift+w layout toggle split
 
+
 bindsym $m+s $e "sleep 1;xset dpms force off"
+bindsym $m+c $e code --no-sandbox
 bindsym $m+b $e google-chrome --no-sandbox
 bindsym $m+x $e pactl set-sink-volume @DEFAULT_SINK@ +10%
 bindsym $m+z $e pactl set-sink-volume @DEFAULT_SINK@ -10%
