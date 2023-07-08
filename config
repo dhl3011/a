@@ -21,7 +21,8 @@ bindsym $m+b $e google-chrome --no-sandbox
 bindsym $m+x $e pactl set-sink-volume @DEFAULT_SINK@ +10%
 bindsym $m+z $e pactl set-sink-volume @DEFAULT_SINK@ -10%
 bindsym $m+m $e pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym $m+Return $e i3-sensible-terminal
+bindsym $m+shift+Return $e i3-sensible-terminal
+bindsym $m+Return $e st -f 'dejavu sans mono:size=18:bold'
 bindsym $m+q kill
 bindsym $m+h focus left
 bindsym $m+l focus right
