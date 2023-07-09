@@ -1,4 +1,4 @@
-set nu ls=0 ts=4 sw=4 sts=4 clipboard=unnamedplus nobackup nowritebackup noswapfile wildmenu smartindent smarttab linebreak
+set nu ls=0 ts=4 sw=4 sts=4 clipboard=unnamedplus nobackup nowritebackup noswapfile wildmenu autoindent linebreak enc=utf-8
 set complete+=k~/d/web/data.css
 let g:c='#'
 syntax on
