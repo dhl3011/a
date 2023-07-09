@@ -1,4 +1,4 @@
-if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then startx; fi
+if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then startx /usr/bin/i3; fi
 alias n='nnn -H'
 alias cp='cp -r'
 alias mk='mkdir -p'
