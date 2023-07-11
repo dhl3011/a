@@ -2,8 +2,8 @@ set nu ls=0 ts=4 sw=4 sts=4 clipboard=unnamedplus nobackup nowritebackup noswapf
 set complete+=k~/d/web/data.css
 let g:c='#'
 syntax on
-inoremap <c-w> <esc>:w<cr>
-noremap <c-w> <esc>:w<cr>
+inoremap <c-s> <esc>:w<cr>
+noremap <c-s> <esc>:w<cr>
 noremap <c-q> <esc>:q<cr>
 noremap <c-h> <esc>:bp<cr>
 noremap <c-l> <esc>:bn<cr>
@@ -25,7 +25,8 @@ au BufEnter * silent call C()
 
 function R()
 	if &ft=='html'
-		:!google-chrome --no-sandbox %
+		:silent !google-chrome --no-sandbox %
+		:silent !google-chrome-stable --no-sandbox %
 	endif
 endfunction
 

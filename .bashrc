@@ -13,10 +13,12 @@ alias ram="free -h | awk '/Mem/{print \$3,\$2}'"
 alias disk="df -h| pcregrep -M '/\n' | awk '{print \$3, \$2}'"
 alias weather="curl wttr.in/thanh_ha_hai_duong?1n"
 
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+[[ $- != *i* ]] && return
+
+#case $- in
+#    *i*) ;;
+#      *) return;;
+##esac
 
 PS1='\[\e[38;5;33m\]$PWD \[\e[0m\]'
 . /usr/share/bash-completion/bash_completion
