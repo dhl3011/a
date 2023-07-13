@@ -40,20 +40,13 @@
             position: absolute;
             top: 5rem;
             right: 1rem;
-            display: flex;
+            display: none;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
-
-        .home{
-            background-image: linear-gradient(45deg,#06b6d4,#3b83f6,#6366f1,#a855f7,#ec4899);
-            width: 100vw;
-            height: 100vh;
-
-        }
-
+        
         .login__btn{
             width: 3rem;
             line-height: 2rem;
@@ -62,6 +55,14 @@
             text-align: center;
             border-radius: 10px;
         }
+        
+        .home{
+            background-image: linear-gradient(45deg,#06b6d4,#3b83f6,#6366f1,#a855f7,#ec4899);
+            width: 100vw;
+            height: 100vh;
+
+        }
+
 
         input{
             width: 10rem;
@@ -76,26 +77,33 @@
     </style>
 
     <div class="nav">
-        <a href="">DHL</a>
-        <a href="">HTML</a>
-        <a href="">CSS</a>
-        <a href="">JAVASCRIP</a>
-        <a href="">PHP</a>
+        <a href="#">DHL</a>
         <div style="margin: 0 auto;"></div>
-        <a style="margin-right: 1rem;" href="">Log in</a>
+        <a class="nav__login" style="margin-right: 1rem;" href="#">Log in</a>
     </div>
 
     <div class="login">
         <div style="margin: 1rem;font-size: 1.5rem;">Log in</div>
         <input placeholder="Username" type="text">
         <input placeholder="Password" type="text">
-        <a class="login__btn" href="">OK</a>
+        <a class="login__btn" href="#">OK</a>
         <div style="color: #6366f1;">Forgot Password</div>
     </div>
 
     <div class="home"></div>
 
-    <script></script>
+    <script>
+        var nav__login=document.getElementsByClassName("nav__login")[0];
+        nav__login.addEventListener("click",function(){
+            var login=document.getElementsByClassName("login")[0];
+            if(login.style.display=="flex"){
+                login.style.display="none";
+            }
+            else{
+                login.style.display="flex";
+            }
+        });
+    </script>
 
 </body>
 </html>
