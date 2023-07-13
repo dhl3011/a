@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            outline: 0;
+            border: 0;
+            text-decoration: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            color: black;
+            list-style: none;
+            user-select: none;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #dddddd;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 4rem;
+            padding: 0 2rem;
+        }
+
+        .nav>a {
+            line-height: 4rem;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            background-image: url(image/d.png);
+            background-repeat: no-repeat;
+            background-size: 2rem;
+            background-position: center;
+            width: 4rem;
+            height: 4rem;
+            margin-right: 1rem;
+        }
+
+        input {
+            height: 2rem;
+            border-radius: 5px;
+            background-color: #dddddd;
+            padding: 0 2rem;
+        }
+
+        .dropdown {
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+            width: 60rem;
+            height: 20rem;
+            position: absolute;
+            top: 5rem;
+            left: 5rem;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            display: none;
+            justify-content: space-around;
+            align-items: center;
+            background-color: white;
+        }
+
+        .dropdown a {
+            display: block;
+            line-height: 2rem;
+            margin: 1rem;
+            padding: 0.2rem 1rem;
+            border-radius: 5px;
+        }
+        .dropdown a:hover{
+            background-color: #dddddd;
+        }
+        .contact{
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+            width: 30rem;
+            height: 20rem;
+            position: absolute;
+            top: 5rem;
+            left: 10rem;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: white;
+
+        }
+        .btn{
+            line-height: 2rem;
+            padding: 0 1rem;
+            border-radius: 10px;
+            background-color: #dddddd;
+        }
+
+    </style>
+
+    <div class="nav">
+        <a href="#" class="logo"></a>
+        <a href="#">Documentation</a>
+        <a href="#" onclick="dropdown_open('dropdown')">Tutorials</a>
+        <a href="#" onclick="dropdown_open('contact')">Contact</a>
+        <div style="margin: 0 auto;"></div>
+        <input type="text" placeholder="Search" class="searchbox">
+        <a href="#">dhl</a>
+        <div class="dropdown">
+            <div>
+                <a href="#">Learn HTML</a>
+                <a href="#">Learn CSS</a>
+                <a href="#">Learn Bootstrap</a>
+            </div>
+            <div>
+                <a href="#">Learn HTML</a>
+                <a href="#">Learn CSS</a>
+                <a href="#">Learn Bootstrap</a>
+            </div>
+            <div>
+                <a href="#">Learn HTML</a>
+                <a href="#">Learn CSS</a>
+                <a href="#">Learn Bootstrap</a>
+            </div>
+        </div>
+        <div class="contact">
+            <div style="font-size: 1.5rem;">Contact</div>
+            <input placeholder="Name" type="text">
+            <input placeholder="Phone" type="text">
+            <input placeholder="Email" type="text">
+            <input placeholder="Content" type="text">
+            <a class="btn" onclick="dropdown_open('contact')">Send</a>
+        </div>
+    </div>
+    <script>
+        function dropdown_open(class_name){
+            var x=document.getElementsByClassName(class_name)[0];
+            if(x.style.display=="flex"){
+                x.style.display="none";
+            }
+            else{
+                x.style.display="flex";
+            }
+        }
+    </script>
+</body>
+
+</html>
